@@ -1,24 +1,26 @@
 
     #jeu{
-      width: 800px;
+      width: 1000px;
       height: 800px;
-      border: 2px black solid;
       overflow: hidden;
       position: relative;
     }
+    
     .fond{
       margin-bottom:-5px; 
       z-index: 10;
       position: relative;
     }
-    #vj{
+    
+    #joueur{
       z-index: 100; 
       position: absolute; 
-      top: 10px; 
+      top: 600px; 
       left: 48px;
       max-with : 150px;
       max-height : 150px;
     }
+    
     #vr{
       z-index: 80; 
       position: absolute; 
@@ -27,3 +29,9 @@
       max-with : 150px;
       max-height : 150px;
     }
+                .over {
+                background: rgba(255, 0, 0, 0.5) !important;
+            }
+            .under {
+                max-with : 300px;
+            }

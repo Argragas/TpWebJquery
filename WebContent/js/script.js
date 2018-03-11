@@ -1,4 +1,4 @@
-var tab = ["image/adc.png","image/sgc.png","image/sous-marin.png","image/avion.png","image/css.png","image/br.png"];
+var tab = ["../image/adc.png","../image/sgc.png","../image/sous-marin.png","../image/avion.png","../image/sgc_css.png","../image/adc_br.png"];
 
 
 function getParam(param) {
@@ -75,8 +75,13 @@ $(function() {
           $(box)[collides.hits.length ? $(function() {
         	  $('#vr').css('top',1000);
               $('#vr').css('left',1000);
-              
-        	  $('#info').text( parseInt($('#info').text()) + 1)
+              //Si le joueur touche un element ennemi il gagne des points
+              if($('#vr').attr('src').split("_")[0] == $('#joueur').attr('src').split(".png")[0]){
+                  $('#puissance').text( parseInt($('#puissance').text()) + 1)  
+              }else{
+                  $('#info').text( parseInt($('#info').text()) + 1)  
+              }
+        	  
         	  
         	  deplace();
           }) : $(function() {deplace()}) ];

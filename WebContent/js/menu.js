@@ -10,7 +10,7 @@ function getPlayer() {
 
 function genererLien(){
 
-	url = "game.html?joueur=" + currentimg; 
+	url = "page/game.html?joueur=" + "../"+ currentimg; 
 	$("#lienMenu").attr('href',url);
 	console.log(currentimg);
 

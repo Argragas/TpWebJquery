@@ -29,9 +29,21 @@
       max-with : 150px;
       max-height : 150px;
     }
-                .over {
-                background: rgba(255, 0, 0, 0.5) !important;
-            }
-            .under {
-                max-with : 300px;
-            }
+#game {
+	visibility : hidden;
+}
+
+
+#imgJoueur {
+	 max-with : 150px;
+     max-height : 150px;
+}
+
+#menu {
+	text-align : center;
+	margin-top : 25%;
+}
+
+#lienMenu {
+	display : none;
+}

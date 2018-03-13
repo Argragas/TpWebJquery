@@ -1,6 +1,6 @@
 
 //variable globale du script.
-var tab = ["../image/adc.png","../image/sgc.png","../image/sous-marin.png","../image/avion.png","../image/sgc_css.png","../image/adc_br.png","../image/soldat.png","../image/pompier.png"];
+var tab = ["../image/adc.png","../image/sgc.png","../image/marin.png","../image/marin_peinture.png","../image/avion.png","../image/sgc_css.png","../image/adc_br.png","../image/soldat.jpg","../image/pompier.jpg"];
 var currentVitesse = 2000;
 var vitesseInitiale= 2000;
 
@@ -22,7 +22,7 @@ function getParam(param) {
 
 //retourne une image aléatoire parmis celle dans le tableau tab.
 function getImg(){
-	x = tab[Math.floor(Math.random() * Math.floor(6))];
+	x = tab[Math.floor(Math.random() * Math.floor(11))];
 	//l'image ne peux etre celle du joueur
 	if (x ==  $('#joueur').attr('src')) {
 		getImg();

@@ -1,9 +1,15 @@
-
+body{
+    
+     
+      max-height : 700px;
+}
     #jeu{
       width: 80%;
       height: 80%;
       overflow: hidden;
       position: relative;
+     
+      max-height : 800px;
     }
     
     .fond{
@@ -17,7 +23,7 @@
       position: absolute; 
       top: 600px; 
       left: 48px;
-      max-with : 150px;
+      max-width : 150px;
       max-height : 150px;
     }
     
@@ -26,7 +32,7 @@
       position: absolute; 
       top: -200px; 
       left: 0px;
-      max-with : 150px;
+      max-width : 150px;
       max-height : 150px;
     }
 #game {
@@ -35,7 +41,7 @@
 
 
 #imgJoueur {
-	 max-with : 150px;
+	 max-width : 150px;
      max-height : 150px;
 }
 

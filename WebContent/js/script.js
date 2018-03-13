@@ -41,7 +41,7 @@ $(function() {
     	  
     	  var vitesse = Math.floor((3000-1500)*Math.random())+1500
         $('#vr').animate({top: '800'}, vitesse, 'linear', function(){
-          var vrX = Math.floor(Math.random()*750);
+          var vrX = Math.floor(Math.random()*700);
           var vrY = 0;
           $('#vr').attr('src',getImg);
           $('#vr').css('top',vrY);
@@ -55,7 +55,7 @@ $(function() {
         if (e.which == 39)
         {
           vjX = parseInt($('#joueur').css('left'));
-          if (vjX < 800)
+          if (vjX < 750)
           $('#joueur').css('left', vjX+30);
         }
         

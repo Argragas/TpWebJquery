@@ -2,6 +2,7 @@
 //variable globale du script.
 var tab = ["../image/adc.png","../image/sgc.png","../image/sous-marin.png","../image/avion.png","../image/sgc_css.png","../image/adc_br.png","../image/soldat.png","../image/pompier.png"];
 var currentVitesse = 2000;
+var vitesseIn
 
 
 //Permet de recupérer le nom de l'image du joueur donné dans l'url.
@@ -79,7 +80,16 @@ $(function() {
           if (vjX > 30)
             $('#joueur').css('left', vjX-30);
         }
+        
+        
+        //touche UP pour le déclenchement de la puissance
+      //TODO la puissance ramène le jeu à la vitesse de base
+      
+      
       });
+      
+      
+  
 
      //Gestion des collision. Utilisation du plugin Collides.
       function collision()

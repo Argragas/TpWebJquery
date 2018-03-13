@@ -3,6 +3,10 @@ body{
      
       max-height : 700px;
 }
+
+#bodyGame{
+      max-height : 700px;
+}
     #jeu{
       width: 80%;
       height: 80%;
@@ -43,11 +47,11 @@ body{
 #imgJoueur {
 	 max-width : 150px;
      max-height : 150px;
+    cursor: pointer;
 }
 
 #menu {
 	text-align : center;
-	margin-top : 25%;
 }
 
 #lienMenu {

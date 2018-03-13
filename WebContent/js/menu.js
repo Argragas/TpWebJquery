@@ -10,10 +10,16 @@ function getPlayerAleatoire() {
 	$("#lienMenu").show();
 }
 
+//Affiche les differentes images de joueurs dans des div puis affiche ces div dans affichageJoueurs.
+//TODO coder la fonction ! ^^ .... ne pas oublier d'ajouter un onClick sur l'image pour pouvoir générer le lien.
+function afficherLesJoueurs(){
+    alert("TODO");
+}
+
+
 //Fonction générant un lien hypertexte avec un paramètre joueur et sa valeur correspondante à l'image choisie par la fonction
 //getPlayerAleatoire()
 function genererLien(){
 	url = "page/game.html?joueur=" + "../"+ currentimg; 
 	$("#lienMenu").attr('href',url);
-
 }

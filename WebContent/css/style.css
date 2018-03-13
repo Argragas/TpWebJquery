@@ -1,18 +1,16 @@
 body{
-    
-     
       max-height : 700px;
 }
 
 #bodyGame{
       max-height : 700px;
 }
-    #jeu{
+
+#jeu{
       width: 80%;
       height: 80%;
       overflow: hidden;
       position: relative;
-     
       max-height : 800px;
     }
     

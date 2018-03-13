@@ -14,6 +14,7 @@ function getPlayerAleatoire() {
 //TODO coder la fonction ! ^^ .... ne pas oublier d'ajouter un onClick sur l'image pour pouvoir générer le lien.
 function afficherLesJoueurs(){
     alert("TODO");
+   
 }
 
 

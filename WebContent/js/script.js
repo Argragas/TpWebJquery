@@ -2,7 +2,7 @@
 //variable globale du script.
 var tab = ["../image/adc.png","../image/sgc.png","../image/sous-marin.png","../image/avion.png","../image/sgc_css.png","../image/adc_br.png","../image/soldat.png","../image/pompier.png"];
 var currentVitesse = 2000;
-var vitesseIn
+var vitesseInitiale= 2000;
 
 
 //Permet de recupérer le nom de l'image du joueur donné dans l'url.
@@ -57,8 +57,10 @@ $(function() {
           $('#vr').attr('src',getImg);
           $('#vr').css('top',vrY);
           $('#vr').css('left',vrX);
-       
+            
+            currentVitesse = currentVitesse + 10
           ok = 1;
+          
         });         
       };
 	   
@@ -82,8 +84,10 @@ $(function() {
         }
         
         
-        //touche UP pour le déclenchement de la puissance
-      //TODO la puissance ramène le jeu à la vitesse de base
+        //touche UP n'a d'eefet que si la puissance est sup ou égale à 10.
+        //l'activation de la puissance retranche 10 à celle ci
+        //la puissance ramène le jeu à la vitesse de base.
+      //TODO gestion de la touche up
       
       
       });

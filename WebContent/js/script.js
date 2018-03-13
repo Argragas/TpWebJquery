@@ -1,6 +1,8 @@
 
-//variable globale du script
+//variable globale du script.
 var tab = ["../image/adc.png","../image/sgc.png","../image/sous-marin.png","../image/avion.png","../image/sgc_css.png","../image/adc_br.png","../image/soldat.png","../image/pompier.png"];
+var currentVitesse = 2000;
+
 
 //Permet de recupérer le nom de l'image du joueur donné dans l'url.
 function getParam(param) {
@@ -28,6 +30,12 @@ function getImg(){
 	}
 }
 
+//génère une vitesse en fonction du paramètre max
+function getVitesse(max){
+    return Math.floor((max-1500)*Math.random())+1500;
+}
+
+
 //fonction propre au fonctionnement du jeu
 $(function() {
 	  var joueur = getParam('joueur');
@@ -39,11 +47,11 @@ $(function() {
   
         //gère les déplacement des images.
       function deplace(){
-    	 var vitesse = Math.floor((3000-1500)*Math.random())+1500;
+    	 var vitesse = getVitesse(currentVitesse);
         //déplace l'image ennemi
         $('#vr').animate({top: '800'}, vitesse, 'linear', function(){
         //génération de l'emplacement de départ de l'image ennemi.
-          var vrX = Math.floor(Math.random()*700);
+          var vrX = Math.floor(Math.random()*600);
           var vrY = 0;
           $('#vr').attr('src',getImg);
           $('#vr').css('top',vrY);
@@ -80,8 +88,8 @@ $(function() {
           //Si il y a collision
           $(box)[collides.hits.length ? $(function() {
             //déplacement de l'image ennemi hors champs.
-        	  $('#vr').css('top',1000);
-              $('#vr').css('left',1000);
+        	  $('#vr').css('top',2000);
+              $('#vr').css('left',2000);
               //Si le joueur touche un element ennemi il gagne des points
               if($('#vr').attr('src').split("_")[0] == $('#joueur').attr('src').split(".png")[0]){
                   $('#puissance').text( parseInt($('#puissance').text()) + 1)  

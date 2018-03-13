@@ -1,4 +1,4 @@
-var tab = ["../image/adc.png","../image/sgc.png","../image/sous-marin.png","../image/avion.png","../image/sgc_css.png","../image/adc_br.png"];
+var tab = ["../image/adc.png","../image/sgc.png","../image/sous-marin.png","../image/avion.png","../image/sgc_css.png","../image/adc_br.png","../image/soldat.png","../image/pompier.png"];
 
 
 function getParam(param) {

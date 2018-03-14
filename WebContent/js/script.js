@@ -1,6 +1,7 @@
 
 //variable globale du script.
-var tab = ["../image/adc.png","../image/sgc.png","../image/marin.png","../image/marin_peinture.png","../image/avion.png","../image/sgc_css.png","../image/adc_br.png","../image/soldat.png","../image/pompier.png","../image/avion_oiseau.png","../image/pompier_eau.png","../image/soldat_arbre.png"];
+var tab = ["../image/marin_peinture.png","../image/sgc_css.png","../image/adc_br.png","../image/avion_oiseau.png","../image/pompier_eau.png","../image/soldat_arbre.png"];
+//var tabJoueur = ["../image/adc.png","../image/sgc.png","../image/marin.png","../image/avion.png","../image/soldat.png","../image/pompier.png"];
 var currentVitesse = 2000;
 var vitesseInitiale= 2000;
 
@@ -22,18 +23,19 @@ function getParam(param) {
 
 //retourne une image aléatoire parmis celle dans le tableau tab.
 function getImg(){
-	x = tab[Math.floor(Math.random() * Math.floor(11))];
-	//l'image ne peux etre celle du joueur
-	if (x ==  $('#joueur').attr('src')) {
-		getImg();
-	} else {
-		return x;
-	}
+	return tab[Math.floor(Math.random() * 6)];
 }
 
 //génère une vitesse en fonction du paramètre max
-function getVitesse(max){
-    return Math.floor((max-1500)*Math.random())+1500;
+//function getVitesse(max){
+//    return Math.floor((max)*Math.random())+ vitesseInitiale;
+//}
+
+//TODO le jeux est terminer quand le joueurs totalise 20 collisions
+//Affiche une alerte qui indique que le jeu est terminé
+//ensuite retour sur index.html
+function perdu(){
+    
 }
 
 
@@ -41,25 +43,24 @@ function getVitesse(max){
 $(function() {
 	  var joueur = getParam('joueur');
 	   $('#joueur').attr('src',joueur);
-      var ok = 1;
       var box = '#joueur',
       drag = $(".drag"),
       drop = $(".drop");
   
         //gère les déplacement des images.
       function deplace(){
-    	 var vitesse = getVitesse(currentVitesse);
+    	 //var vitesse = getVitesse(currentVitesse);
+    	 var vitesse = currentVitesse;
         //déplace l'image ennemi
-        $('#vr').animate({top: '800'}, vitesse, 'linear', function(){
+        $('#vr').animate({top: '750'}, vitesse, 'linear', function(){
         //génération de l'emplacement de départ de l'image ennemi.
           var vrX = Math.floor(Math.random()*600);
           var vrY = 0;
-          $('#vr').attr('src',getImg);
+          $('#vr').attr('src',getImg());
           $('#vr').css('top',vrY);
           $('#vr').css('left',vrX);
             
-            currentVitesse = currentVitesse + 10
-          ok = 1;
+            currentVitesse = currentVitesse + 500;
           
         });         
       };
@@ -71,21 +72,21 @@ $(function() {
         if (e.which == 39)
         {
           vjX = parseInt($('#joueur').css('left'));
-          if (vjX < 750)
-          $('#joueur').css('left', vjX+30);
+          if (vjX < 770)
+          $('#joueur').css('left', vjX+60);
         }
         
         //touche -> déplacement vers la droit.
         if (e.which == 37)
         {
           vjX = parseInt($('#joueur').css('left'));
-          if (vjX > 30)
-            $('#joueur').css('left', vjX-30);
+          if (vjX > 50)
+            $('#joueur').css('left', vjX-60);
         }
         
         
-        //touche UP n'a d'eefet que si la puissance est sup ou égale à 10.
-        //l'activation de la puissance retranche 10 à celle ci
+        //touche UP n'a d'eefet que si la puissance est sup ou égale à 5.
+        //l'activation de la puissance retranche 5 à celle ci
         //la puissance ramène le jeu à la vitesse de base.
       //TODO gestion de la touche up
       
@@ -109,14 +110,15 @@ $(function() {
                   $('#puissance').text( parseInt($('#puissance').text()) + 1)  
               }else{
                 //sinon son compteur de collision augmente.
-                  $('#info').text( parseInt($('#info').text()) + 1)  
+                  $('#info').text( parseInt($('#info').text()) + 1);
+                  currentVitesse = currentVitesse + 500;
+                  perdu();
               }
                 //appel de la fonction deplace pour qu'une nouvelle image soit générée.        	  
         	  deplace();
         	  //Si pas de collision appel de la fonction deplace pour qu'une nouvelle image soit générée.        	  
           }) : $(function() {deplace()}) ];
 
-          ok = 0;
       }
       
       deplace();

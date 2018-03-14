@@ -1,10 +1,10 @@
 //variable globale du script
-var tab = ["image/adc.png","image/sgc.png","image/marin.png","image/avion.png",,"image/soldat.png","image/pompier.png"];
+var tab = ["image/adc.png","image/sgc.png","image/marin.png","image/avion.png","image/soldat.png","image/pompier.png"];
 var currentimg;
 
 //La fonction tire aléatoirement une image depuis le tableau tab et l'affiche dans la balise img imgJoueur.
 function getPlayerAleatoire() {
-	currentimg = tab[Math.floor(Math.random() * Math.floor(7))];
+	currentimg = tab[Math.floor(Math.random() * 6)];
 	$('#imgJoueur').attr('src',currentimg);
 	$("#imgJoueur").animate({		right: '500px', height: '600px',width: '300px'});
 	$("#lienMenu").show();

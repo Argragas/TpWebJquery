@@ -2,12 +2,13 @@
 //variable globale du script.
 var tab = ["../image/marin_peinture.png","../image/sgc_css.png","../image/adc_br.png","../image/avion_oiseau.png","../image/pompier_eau.png","../image/soldat_arbre.png"];
 //var tabJoueur = ["../image/adc.png","../image/sgc.png","../image/marin.png","../image/avion.png","../image/soldat.png","../image/pompier.png"];
-var currentVitesse = 2000;
-var vitesseInitiale= 2000;
+var currentVitesse ;
+var vitesseInitiale= 3500;
 
 
 //Permet de recupérer le nom de l'image du joueur donné dans l'url.
 function getParam(param) {
+	currentVitesse = vitesseInitiale;
 	var vars = {};
 	window.location.href.replace( location.hash, '' ).replace( 
 		/[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
@@ -26,10 +27,12 @@ function getImg(){
 	return tab[Math.floor(Math.random() * 6)];
 }
 
-//génère une vitesse en fonction du paramètre max
-//function getVitesse(max){
-//    return Math.floor((max)*Math.random())+ vitesseInitiale;
-//}
+//gestion de la vitesse
+function getVitesse(){
+    if(currentVitesse < 100){
+        currentVitesse = vitesseInitiale;
+    }
+}
 
 //TODO le jeux est terminer quand le joueurs totalise 20 collisions
 //Affiche une alerte qui indique que le jeu est terminé
@@ -49,10 +52,9 @@ $(function() {
   
         //gère les déplacement des images.
       function deplace(){
-    	 //var vitesse = getVitesse(currentVitesse);
-    	 var vitesse = currentVitesse;
+    	$('#vitesse').text(currentVitesse );
         //déplace l'image ennemi
-        $('#vr').animate({top: '750'}, vitesse, 'linear', function(){
+        $('#vr').animate({top: '750'}, currentVitesse, 'linear', function(){
         //génération de l'emplacement de départ de l'image ennemi.
           var vrX = Math.floor(Math.random()*600);
           var vrY = 0;
@@ -60,7 +62,7 @@ $(function() {
           $('#vr').css('top',vrY);
           $('#vr').css('left',vrX);
             
-            currentVitesse = currentVitesse + 500;
+            currentVitesse = currentVitesse - 10;
           
         });         
       };
@@ -111,7 +113,7 @@ $(function() {
               }else{
                 //sinon son compteur de collision augmente.
                   $('#info').text( parseInt($('#info').text()) + 1);
-                  currentVitesse = currentVitesse + 500;
+                  currentVitesse = currentVitesse - 10;
                   perdu();
               }
                 //appel de la fonction deplace pour qu'une nouvelle image soit générée.        	  

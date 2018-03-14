@@ -1,11 +1,12 @@
 body{
-      max-height : 700px;
+      margin:0;
 }
 
+/*
 #bodyGame{
       max-height : 700px;
 }
-
+*/
 #jeu{
       width: 80%;
       height: 80%;
@@ -23,7 +24,7 @@ body{
     #joueur{
       z-index: 100; 
       position: absolute; 
-      top: 600px; 
+      top: 510px; 
       left: 48px;
       max-width : 150px;
       max-height : 150px;
@@ -55,9 +56,23 @@ body{
 #lienMenu {
 	display : none;
 }
-
 #compteur{
-        position: absolute;
-    left: 80%;
-    top: 50%;
+    position: relative;
+    top: 50px;
+}
+#collisions, #puissances, #vitesses{
+    position: relative;
+    display: inline-block;
+    font-size: x-large;
+    font-family: Verdana;
+    font-weight: bold;
+}
+#collisions{
+    left: 50px;
+}
+#puissances{
+    left: 100px;
+}
+#vitesses{
+    left: 150px;
 }

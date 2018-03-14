@@ -7,6 +7,7 @@
 /*body {
   background: url(http://thumbs.dreamstime.com/x/seamless-vintage-wallpaper-pattern-1586021.jpg);
   background-size: 15em;
+  margin
 }*/
 
 .abs {
@@ -15,122 +16,124 @@
 
 #box {
   position: relative;
-  margin: 7em auto;
-  width: 30em;
-  height: 31em;
+  /*margin: 7em auto;*/
+  width: 1200px;
+  height: 1024px;
   border-radius: 2.6em;
   background: #38343a;
 }
 
 #pinstripe {
-  top:.65em;
-  left: .75em;
-  width: 28.5em;
-  height: 29.6em;
+  top: 10px;
+  left: 10px;
+  width: 1180px;
+  height: 1004px;
   box-shadow: 0px 0px 5px rgba(0,0,0,1) inset;
-  border: 2px solid #edd495;
+  border: 2px solid #004b6e;
   border-radius: 2.1em;
 }
 
 #inner-bevel {
   overflow: hidden;
-  top:.5em;
-  left: .4em;
-  width: 27.5em;
-  height: 28.5em;
+  top: 10px;
+  left: 10px;
+  width: 1155px;
+  height: 984px;
   box-shadow: 0px 0px .5em #13100e, 0px 0px .5em #38343a, inset 0 .4em .5em lighten(#13100e, 9), inset 0 0 .5em lighten(#13100e, 9) ;
   border: 1em solid #38343a;
   border-radius: 1.7em;
 }
 #inner-rim{
-  background: #819074;
+  background: #747b90;
   background-image:
     linear-gradient(
-      #819074, #a3b08c
+      #747c90, #a1a9ff
     );
-  width: 27.5em;
-  height: 18em;
+  width: 1125px;
+  height: 955px;
   box-shadow: 0px 0px 3em #a3b08c inset, 0px 0px .5em #13100e, 0px 0px .5em #38343a, inset 0 .4em .5em lighten(#13100e, 9), inset 0 0 .5em lighten(#13100e, 9) ;
 }
 #screen-rim {
-  top: 2em;
-  left: 3em;
+  top: 30px;
+  left: 50px;
   background: #ebdab9;
-  width: 20em;
-  height: 14em;
+  width: 1020px;
+  height: 700px;
   box-shadow: 0px 0px .5em rgba(0,0,0,0.1), 0px 0px .5em rgba(0,0,0,0.1), 0px 0px .5em #38343a, inset 0 2em .5em rgba(0,0,0,0.1), inset 0 0 .5em lighten(#13100e, 9) ;
   border-radius: 3.2em;
 }
 #screen {
   overflow: hidden;
-  top: .5em;
-  left: .5em;
+  top: 10px;
+  left: 10px;
   background: #d5d3b6;
-  width: 19em;
-  height: 13em;
+  width: 1000px;
+  height: 680px;
   box-shadow: 0px 0px 3em #a3b08c, inset 0 .15em 1em rgba(0,0,0,0.9) ,inset -.11em -.11em 3em #80775c ;
   border-radius: 2.9em;
 }
-  #vid {
-    margin: -1em -.6em;
-  }
+#game {
+  margin: 15px 15px;
+  visibility: visible;
+}
 #separator {
-  top: 18em;
-  height: 1.25em;
-  width: 27.5em;
+  top: 730px;
+  height: 20px;
+  width: 1125px;
   background: #DDD;
   box-shadow: inset 0 .2em .2em #FFF, inset 0 -.01em .3em #000;
 }
 .strip {
-  height: .15em;
-  width: 27.5em;
+  height: 2px;
+  width: 1125px;
   background: #333;
   box-shadow: 0 .2em .2em #FFF, 0 -.01em .1em rgba(0,0,0,.5);
 }
 #strip-one {
-  top: .25em;
+  top: 5px;
 }
 #strip-two {
-  top: .75em;
+  top: 11px;
 }
 #bottom-panel {
-  top: 19.2em;
-  height: 8em;
-  width: 25.5em;
-  background: #fdd880;
-  box-shadow: inset 0 1em 5em #fdd880, inset 0 -1em 5em #672d04;
+  top: 750px;
+  height: 205px;
+  width: 1125px;
+  background: #fd8080;
+  box-shadow: inset 0 1em 5em #fd8080, inset 0 -1em 5em #672d04;
 }
 .knob {
-  top: 1em;
-  height: 4.5em;
-  width: 4.5em;
+  top: 20px;
+  height: 75px;
+  width: 75px;
   border-radius: 50%;
-  border: .15em solid #fdd880;
-  background: #fdd880;
+  border: .15em solid #fd8080; 
+  background: #fd8080;
   box-shadow: 0 -.1em .2em #fdd880, 0 .1em .2em #672d04, inset 0 -1em 5em #fdd880, inset 0 1em 5em lighten(#672d04, 70);
 }
-#knob-one {
-  left: 2em;
+#knob-one,
+#knob-two {
+  left: 30px;
 }
 #knob-two {
-  right: 2em;
+  top: 100px;
 }
 .rim {
-  top: .14em;
-  left: .15em;
-  height: 4em;
-  width: 4em;
+  top: 3px;
+  left: 3px;
+  height: 65px;
+  width: 65px;
   border-radius: 50%;
   background: #DDD;
   box-shadow: inset 0 .2em .2em #FFF, inset 0 -.01em .3em rgba(0,0,0,0.4);
 }
 .knob-inner {
-  top: .25em;
-  left: .25em;
-  height: 3.5em;
-  width: 3.5em;
+  top: 4px;
+  left: 5px;
+  height: 56px;
+  width: 56px;
   border-radius: 50%;
-  background: #fdd880;
+  background: #fd8080;
   box-shadow: 0 -.1em .2em #fdd880, 0 .1em .2em #672d04, inset 0 -1em 5em #fdd880, inset 0 1em 5em lighten(#672d04, 70);
 }
 #knob-one-inner {
@@ -139,16 +142,26 @@
 #knob-two-inner {
 
 }
+#bottom-panel #screen-rim{
+    top: 20px;
+    left: 115px;
+    width: 800px;
+    height: 150px;
+}
+#bottom-panel #screen-rim #screen{
+    width: 780px;
+    height: 130px;
+}
 #speaker-grill {
-  top: 1em;
-  left: 8.36em;
-  height: 4.4em;
-  width: 8.4em;
+  top: 15px;
+  right: 51px;
+  height: 170px;
+  width: 135px;
 }
 .grill-insert {
-  height: 4.5em;
-  width: .3em;
-   background: #fdd880;
+  height: 170px;
+  width: 5px;
+   background: #fd8080;
   box-shadow: 0 -.1em .2em #fdd880, 0 .1em .2em #672d04, inset 0 -.1em .1em #672d04, inset 0 .1em .1em #fbe6b1, inset 0 -1em 5em #fdd880, inset 0 1em 5em lighten(#672d04, 70);
   border-radius: .25em;
 }
@@ -207,10 +220,10 @@
   left: 8.5em;
 }
 #speaker {
-  top: 1.4em;
-  left: 8.75em;
-  height: 4em;
-  width: 8em;
+  top: 20px;
+  right: 40px;
+  height: 160px;
+  width: 150px;
   background-color: #000;
   /*background: url(http://www.featurepics.com/FI/Thumb300/20090323/Metal-Wire-Mesh-1124623.jpg);*/
   background-size: 4em;

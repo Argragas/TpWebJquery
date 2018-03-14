@@ -53,19 +53,25 @@ body{
 	text-align : center;
 }
 
-#lienMenu {
-	display : none;
-}
 #compteur{
     position: relative;
     top: 50px;
 }
-#collisions, #puissances, #vitesses{
-    position: relative;
+#collisions, #puissances, #vitesses, #aleatoire, #choisirpersonnage{
     display: inline-block;
+}
+ #aleatoire, #choisirpersonnage{
+     width: 48%;
+}
+#collisions, #puissances, #vitesses, #menu a, #menu p{
+    position: relative;
     font-size: x-large;
     font-family: Verdana;
     font-weight: bold;
+}
+#menu a, #menu a:visited{
+    text-decoration: none;
+    color: black;
 }
 #collisions{
     left: 50px;
@@ -75,4 +81,21 @@ body{
 }
 #vitesses{
     left: 150px;
+}
+#menu {
+    text-align: center;
+    top: 200px;
+    position: relative;
+    visibility: visible;
+}
+#lienMenu {
+	display : none;
+	border: 3px solid black;
+    padding: 10px;
+    top: 50px;
+}
+#lienMenu:hover {
+	color: white !important;
+	background-color: black;
+	border-color: white;
 }

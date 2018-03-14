@@ -4,27 +4,79 @@
 <meta charset="utf-8">
 <title>TP Web Jquery</title>
 <link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="../css/tv.css" />
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/script.js"></script>
+<script src="../js/jquery.overlaps.js"></script>
+<script src="../js/tv.js"></script>
 </head>
 <body id="bodyGame">
 
+<div id="wrap">
+  <div id="box">
+    <div id="pinstripe" class="abs">
+      <div id="inner-bevel" class="abs">
+        <div id="inner-rim" class="abs">
+          <div id="screen-rim" class="abs">
+            <div id="screen" class="abs">
+              <div id="game">
+                <img alt="Joueur" id="joueur" class="drag" > 
+			     <img alt="Ennemies" id="vr" class="drop" src="../image/avion.png">
+              </div>
+            </div>
+          </div>
+          <div id="separator" class="abs">
+            <div id="strip-one" class="strip abs"></div>
+            <div id="strip-two" class="strip abs"></div>
+          </div>
+          <div id="bottom-panel" class="abs">
+            <div id="knob-one" class="knob abs">
+              <div class="rim abs">
+                <div id="knob-one-inner" class="knob-inner abs"></div>
+              </div>
+            </div>
+            <div id="knob-two" class="knob abs">
+              <div class="rim abs">
+                <div id="knob-two-inner" class="knob-inner abs"></div>
+              </div>
+            </div>
+            <div id="screen-rim" class="abs">
+                <div id="screen" class="abs">
+                    <div id="compteur">
+                		<div id="collisions">Collisions : <span id="info">0</span></div>
+                		<div id="puissances">Puissance : <span id="puissance">0</span></div>
+                	    <div id="vitesses">Vitesse : <span id="vitesse">0</span></div>
+                	</div>
+                </div>
+            </div>
+            <div id="speaker" class="abs"></div>
+            <div id="speaker-grill" class="abs">
+              <div id="g-i-one" class="grill-insert abs"></div>
+              <div id="g-i-two" class="grill-insert abs"></div>
+              <div id="g-i-three" class="grill-insert abs"></div>
+              <div id="g-i-four" class="grill-insert abs"></div>
+              <div id="g-i-five" class="grill-insert abs"></div>
+              <div id="g-i-six" class="grill-insert abs"></div>
+              <div id="g-i-seven" class="grill-insert abs"></div>
+              <div id="g-i-eight" class="grill-insert abs"></div>
+              <div id="g-i-nine" class="grill-insert abs"></div>
+              <div id="g-i-ten" class="grill-insert abs"></div>
+              <div id="g-i-eleven" class="grill-insert abs"></div>
+              <div id="g-i-twelve" class="grill-insert abs"></div>
+              <div id="g-i-thirteen" class="grill-insert abs"></div>
+              <div id="g-i-fourteen" class="grill-insert abs"></div>
+              <div id="g-i-fifteen" class="grill-insert abs"></div>
+              <div id="g-i-sixteen" class="grill-insert abs"></div>
+              <div id="g-i-seventeen" class="grill-insert abs"></div>
+              <div id="g-i-eighteen" class="grill-insert abs"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <div id="compteur">
-		Collisions : <span id="info">0</span>
-		Puissance : <span id="puissance">0</span>
-	</div>	
-		<div id="jeu">
-
-			<img id="fond1" class="fond" src="../image/paper-101205_960_720.png">
-
-
-			<img id="joueur" class="drag" > 
-			<img id="vr" class="drop" src="../image/avion.png">
-		</div>
-
-
-		<script src="../js/jquery-3.3.1.min.js"></script>
-		<script src="../js/script.js"></script>
-		<script src="../js/jquery.overlaps.js"></script>
+</div>
 
 </body>
 </html>

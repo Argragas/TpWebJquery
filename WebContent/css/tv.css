@@ -1,0 +1,240 @@
+@CHARSET "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+
+/*body {
+  background: url(http://thumbs.dreamstime.com/x/seamless-vintage-wallpaper-pattern-1586021.jpg);
+  background-size: 15em;
+  margin
+}*/
+
+.abs {
+  position: absolute;
+}
+
+#box {
+  position: relative;
+  /*margin: 7em auto;*/
+  width: 1200px;
+  height: 1024px;
+  border-radius: 2.6em;
+  background: #38343a;
+}
+
+#pinstripe {
+  top: 10px;
+  left: 10px;
+  width: 1180px;
+  height: 1004px;
+  box-shadow: 0px 0px 5px rgba(0,0,0,1) inset;
+  border: 2px solid #004b6e;
+  border-radius: 2.1em;
+}
+
+#inner-bevel {
+  overflow: hidden;
+  top: 10px;
+  left: 10px;
+  width: 1155px;
+  height: 984px;
+  box-shadow: 0px 0px .5em #13100e, 0px 0px .5em #38343a, inset 0 .4em .5em lighten(#13100e, 9), inset 0 0 .5em lighten(#13100e, 9) ;
+  border: 1em solid #38343a;
+  border-radius: 1.7em;
+}
+#inner-rim{
+  background: #747b90;
+  background-image:
+    linear-gradient(
+      #747c90, #a1a9ff
+    );
+  width: 1125px;
+  height: 955px;
+  box-shadow: 0px 0px 3em #a3b08c inset, 0px 0px .5em #13100e, 0px 0px .5em #38343a, inset 0 .4em .5em lighten(#13100e, 9), inset 0 0 .5em lighten(#13100e, 9) ;
+}
+#screen-rim {
+  top: 30px;
+  left: 50px;
+  background: #ebdab9;
+  width: 1020px;
+  height: 700px;
+  box-shadow: 0px 0px .5em rgba(0,0,0,0.1), 0px 0px .5em rgba(0,0,0,0.1), 0px 0px .5em #38343a, inset 0 2em .5em rgba(0,0,0,0.1), inset 0 0 .5em lighten(#13100e, 9) ;
+  border-radius: 3.2em;
+}
+#screen {
+  overflow: hidden;
+  top: 10px;
+  left: 10px;
+  background: #d5d3b6;
+  width: 1000px;
+  height: 680px;
+  box-shadow: 0px 0px 3em #a3b08c, inset 0 .15em 1em rgba(0,0,0,0.9) ,inset -.11em -.11em 3em #80775c ;
+  border-radius: 2.9em;
+}
+#game {
+  margin: 15px 15px;
+  visibility: visible;
+}
+#separator {
+  top: 730px;
+  height: 20px;
+  width: 1125px;
+  background: #DDD;
+  box-shadow: inset 0 .2em .2em #FFF, inset 0 -.01em .3em #000;
+}
+.strip {
+  height: 2px;
+  width: 1125px;
+  background: #333;
+  box-shadow: 0 .2em .2em #FFF, 0 -.01em .1em rgba(0,0,0,.5);
+}
+#strip-one {
+  top: 5px;
+}
+#strip-two {
+  top: 11px;
+}
+#bottom-panel {
+  top: 750px;
+  height: 205px;
+  width: 1125px;
+  background: #fd8080;
+  box-shadow: inset 0 1em 5em #fd8080, inset 0 -1em 5em #672d04;
+}
+.knob {
+  top: 20px;
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  border: .15em solid #fd8080; 
+  background: #fd8080;
+  box-shadow: 0 -.1em .2em #fdd880, 0 .1em .2em #672d04, inset 0 -1em 5em #fdd880, inset 0 1em 5em lighten(#672d04, 70);
+}
+#knob-one,
+#knob-two {
+  left: 30px;
+}
+#knob-two {
+  top: 100px;
+}
+.rim {
+  top: 3px;
+  left: 3px;
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  background: #DDD;
+  box-shadow: inset 0 .2em .2em #FFF, inset 0 -.01em .3em rgba(0,0,0,0.4);
+}
+.knob-inner {
+  top: 4px;
+  left: 5px;
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  background: #fd8080;
+  box-shadow: 0 -.1em .2em #fdd880, 0 .1em .2em #672d04, inset 0 -1em 5em #fdd880, inset 0 1em 5em lighten(#672d04, 70);
+}
+#knob-one-inner {
+  ;
+}
+#knob-two-inner {
+
+}
+#bottom-panel #screen-rim{
+    top: 20px;
+    left: 115px;
+    width: 800px;
+    height: 150px;
+}
+#bottom-panel #screen-rim #screen{
+    width: 780px;
+    height: 130px;
+}
+#speaker-grill {
+  top: 15px;
+  right: 51px;
+  height: 170px;
+  width: 135px;
+}
+.grill-insert {
+  height: 170px;
+  width: 5px;
+   background: #fd8080;
+  box-shadow: 0 -.1em .2em #fdd880, 0 .1em .2em #672d04, inset 0 -.1em .1em #672d04, inset 0 .1em .1em #fbe6b1, inset 0 -1em 5em #fdd880, inset 0 1em 5em lighten(#672d04, 70);
+  border-radius: .25em;
+}
+#g-i-one{
+  left: 0;
+}
+#g-i-two{
+  left: .5em;
+}
+#g-i-three{
+  left: 1em;
+}
+#g-i-four{
+  left: 1.5em;
+}
+#g-i-five{
+  left: 2em;
+}
+#g-i-six{
+  left: 2.5em;
+}
+#g-i-seven{
+  left: 3em;
+}
+#g-i-eight{
+  left: 3.5em;
+}
+#g-i-nine{
+  left: 4em;
+}
+#g-i-ten{
+  left: 4.5em;
+}
+#g-i-eleven{
+  left: 5em;
+}
+#g-i-twelve{
+  left: 5.5em;
+}
+#g-i-thirteen{
+  left: 6em;
+}
+#g-i-fourteen{
+  left: 6.5em;
+}
+#g-i-fifteen{
+  left: 7em;
+}
+#g-i-sixteen{
+  left: 7.5em;
+}
+#g-i-seventeen{
+  left: 8em;
+}
+#g-i-eighteen{
+  left: 8.5em;
+}
+#speaker {
+  top: 20px;
+  right: 40px;
+  height: 160px;
+  width: 150px;
+  background-color: #000;
+  /*background: url(http://www.featurepics.com/FI/Thumb300/20090323/Metal-Wire-Mesh-1124623.jpg);*/
+  background-size: 4em;
+  box-shadow: inset 0 -.1em .4em rgba(0,0,0,0.5), inset 0 .1em .4em rgba(0,0,0,0.5);
+}
+#shadow {
+  position: relative;
+  margin: 0 auto;
+  top: -4em;
+  height: 2em;
+  width: 30em;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.5);
+}

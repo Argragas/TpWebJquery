@@ -1,5 +1,5 @@
 //variable globale du script
-var tab = ["image/adc.png","image/sgc.png","image/marin.png","image/avion.png",,"image/soldat.jpg","image/pompier.jpg"];
+var tab = ["image/adc.png","image/sgc.png","image/marin.png","image/avion.png",,"image/soldat.png","image/pompier.png"];
 var currentimg;
 
 //La fonction tire aléatoirement une image depuis le tableau tab et l'affiche dans la balise img imgJoueur.

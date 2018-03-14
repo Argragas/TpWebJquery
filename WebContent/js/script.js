@@ -1,6 +1,6 @@
 
 //variable globale du script.
-var tab = ["../image/adc.png","../image/sgc.png","../image/marin.png","../image/marin_peinture.png","../image/avion.png","../image/sgc_css.png","../image/adc_br.png","../image/soldat.png","../image/pompier.jpg","../image/avion_oiseau.png","../image/pompier_eau.jpg","../image/soldat_arbre.png"];
+var tab = ["../image/adc.png","../image/sgc.png","../image/marin.png","../image/marin_peinture.png","../image/avion.png","../image/sgc_css.png","../image/adc_br.png","../image/soldat.png","../image/pompier.png","../image/avion_oiseau.png","../image/pompier_eau.png","../image/soldat_arbre.png"];
 var currentVitesse = 2000;
 var vitesseInitiale= 2000;
 
